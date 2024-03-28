@@ -1,13 +1,13 @@
 import React from 'react';
-import { useState } from 'react'
-import styles from './Navbar.module.css';
-import brand from '../image/rightlogo.svg'
-import search from '../image/search.svg'
-import love from '../image/love.svg'
-import user from '../image/user.svg'
-import bag from '../image/bag.svg'
-import downlogo from '../image/downlogo.svg'
-import { Link } from "react-router-dom";
+import { useState } from 'react';//react hooks
+import styles from './Navbar.module.css';//css
+import brand from '../image/rightlogo.svg';//img
+import search from '../image/search.svg'//img
+import love from '../image/love.svg'//img
+import user from '../image/user.svg';//img
+import bag from '../image/bag.svg';//img
+import downlogo from '../image/downlogo.svg';//img
+import { Link } from "react-router-dom";//router
 // import React from 'react';
 function Navbar() {
   // adding the states 
@@ -26,6 +26,7 @@ function Navbar() {
         <nav className={`${styles.navbar}`}>
           {/* logo */}
           <div className={styles.logobox}>
+            {/*here we used conditional rendring and string interpolation.we showing after medium screen.*/}
             <div className={`${styles.hamburger} ${isActive ? styles.active : ''}`} onClick={toggleActiveClass}>
               <span className={`${styles.bar}`}></span>
               <span className={`${styles.bar}`}></span>
@@ -43,6 +44,7 @@ function Navbar() {
               <div className={styles.eng}><p className={styles.engp}>ENG</p><img src={downlogo} alt="downlogo" /></div>
             </div>
           </div>
+          {/*here we used conditional rendring and string interpolation*/}
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
               <a href='#' className={`${styles.navLink}`}>SHOP</a>

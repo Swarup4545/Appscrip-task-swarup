@@ -3,24 +3,30 @@ import { useSelector } from "react-redux";
 import styles from './main.module.css';
 import Products from './Products';
 const Home = () => {
+     //we use redux in this project cause redux is centralize management system. we can accees state from anywhere we want from and change state so we used Redux.
     const products = useSelector((state) => state.allProducts.products);
     console.log('homedata', products)
     const [showFliter,setShowFilter]=useState(false);
     const [showToggle, setShowToggle] = useState(false);
     const [item1,setItem]=useState([]);
+    //here we have access another reducer data which we update data in our products component so we simply access here without props.
     const products1 = useSelector((state) => state.slectedProducts.products);
     console.log("original",products1)
+    //we have set filter option if we click side bar is show and agin click then its hide. 
     const showfilter = () => {
         setShowFilter(!showFliter);
     };
 
+    //here we have use mouse handler for when we hover on recomended show toggle box.
     const handleMouseEnter = () => {
         setShowToggle(true);
     };
 
+    //here we have use mouse handler for when we hover leav on recomended hide toggle box.
     const handleMouseLeave = () => {
         setShowToggle(false);
     };
+    //here we individually apply filter.when we click on option that itme pass value in fliter. 
     function recomended1(disco){
         let temp=products.filter((i)=>i.discountPercentage > disco)
         setItem(temp)
@@ -56,6 +62,7 @@ const Home = () => {
                     <p className={styles.filter} onClick={showfilter} >{showFliter? `< HIDE FILTER`:`> SHOW FILTER`}</p>
                     <p className={styles.deffilter} onMouseEnter={handleMouseEnter} >default filter</p>
                 </div>
+                {/*here we used conditional rendring and string interpolation*/}
                 <div className={`${showToggle ? styles.toggle : styles.hidden}`} onMouseLeave={handleMouseLeave}>
                     <p className={styles.toggle1} >RECOMENED</p>
                     <p className={styles.toggle2} onClick={()=>recomended1(10)}>DISCOUNT FROM 10%</p>
@@ -65,6 +72,7 @@ const Home = () => {
                 </div>
             </div>
             <div onMouseLeave={handleMouseLeave}>
+            {/*here we pass data using props for hide and show the side bar.we pass data when we filter from RECOMENDED*/}    
             <Products showFilter={showFliter} setShowFilter={setShowFilter} item1={item1}/>
             </div>
             
