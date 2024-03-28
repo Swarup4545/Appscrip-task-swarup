@@ -35,7 +35,7 @@ function Navbar() {
             <div className={styles.brand}>
             <img src={brand}></img>
             </div>
-            <Link to='Appscrip-task-swarup/' className={`${styles.logo}`}>LOGO</Link>
+            <Link to='Appscrip-task-swarup/' className={`${styles.logo}`}>Appscrip</Link>
             <div className={styles.toplogobox}>
               <img src={search} alt="serach logo" />
               <img src={love} alt="love logo" />
