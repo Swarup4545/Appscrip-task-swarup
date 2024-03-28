@@ -53,7 +53,7 @@ const Home = () => {
             <div className={styles.filterbar} onMouseLeave={handleMouseLeave}>
                 <div className={styles.box}>
                     <p className={styles.filterno}>{products1.length}</p>
-                    <p className={styles.filter} onClick={showfilter} >{showFliter? `<HIDE FILTER`:`>SHOW FILTER`}</p>
+                    <p className={styles.filter} onClick={showfilter} >{showFliter? `< HIDE FILTER`:`> SHOW FILTER`}</p>
                     <p className={styles.deffilter} onMouseEnter={handleMouseEnter} >default filter</p>
                 </div>
                 <div className={`${showToggle ? styles.toggle : styles.hidden}`} onMouseLeave={handleMouseLeave}>

@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
     <Navbar />
     <Routes>
-    <Route path="/" element={<ProductListning/>} />
+    <Route path="Appscrip-task-swarup/" element={<ProductListning/>} />
     </Routes>
     </BrowserRouter>
       

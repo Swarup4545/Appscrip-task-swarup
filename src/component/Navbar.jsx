@@ -7,6 +7,7 @@ import love from '../image/love.svg'
 import user from '../image/user.svg'
 import bag from '../image/bag.svg'
 import downlogo from '../image/downlogo.svg'
+import { Link } from "react-router-dom";
 // import React from 'react';
 function Navbar() {
   // adding the states 
@@ -33,7 +34,7 @@ function Navbar() {
             <div className={styles.brand}>
             <img src={brand}></img>
             </div>
-            <a href='#home' className={`${styles.logo}`}>LOGO</a>
+            <Link to='Appscrip-task-swarup/' className={`${styles.logo}`}>LOGO</Link>
             <div className={styles.toplogobox}>
               <img src={search} alt="serach logo" />
               <img src={love} alt="love logo" />
@@ -44,7 +45,7 @@ function Navbar() {
           </div>
           <ul className={`${styles.navMenu} ${isActive ? styles.active : ''}`}>
             <li onClick={removeActive}>
-              <a href='#home' className={`${styles.navLink}`}>SHOP</a>
+              <a href='#' className={`${styles.navLink}`}>SHOP</a>
             </li>
             <li onClick={removeActive}>
               <a href='#home' className={`${styles.navLink}`}>SKILLS</a>
