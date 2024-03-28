@@ -1,0 +1,190 @@
+.toppart{
+    width: 80%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 20px;
+    margin: auto;
+    display: flex;
+    justify-items: center;
+    justify-content: center;
+}
+.hedding{
+    font-weight: 200;
+    font-size: 45px;
+    margin-top: 10px;
+}
+.para1{
+    margin-top: 10px;
+}
+.topin{
+    width: 50%;
+    text-align: center;
+}
+.filterbar{
+    width: 80%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin: auto;
+    height: 40px;
+    padding:10px;
+}
+.filterno{
+    font-weight: 600;
+}
+.filter{
+    margin-left: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.toggle{
+    width: 15%;
+    background-color: white;
+    border: 1px solid black;
+    position: relative;
+    margin-left: auto;    
+}
+.toggle1{
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+.toggle2{
+    border-bottom: 1px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+.toggle3{
+    border-bottom: 1px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+.toggle4{
+    border-bottom: 1px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+.toggle5{
+    border-bottom: 1px solid black;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.hidden{
+    display: none;
+}
+.idealbox{
+    border-bottom: 1px black solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.ocassionbox{
+    border-bottom: 1px black solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+.hedingideal{
+    font-weight: 700; 
+    cursor: pointer;  
+}
+.box{
+    display: flex;
+}
+.side{
+    padding: 4px;
+    width: 15%;
+}
+.costomize{
+    border-bottom: 1px solid black;
+}
+.container{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+.deffilter{
+    margin-left: auto;
+    cursor: pointer;
+}
+.main{
+    width: 100%;
+   
+    display: flex;
+    flex-wrap: wrap;
+    
+    justify-content: space-between;
+    margin: auto;
+}
+.card{
+    height: 255px;
+    background-color: black;
+    color: white;
+    width: 250px;
+    border-radius: 15px;
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+}
+.textbox{
+    
+}
+.textdisco{
+    margin-top: 6px;
+}
+.textdiscoin{
+    background-color: darkgray;
+    border-radius: 5px;
+    padding: 3px;
+}
+.texttitle{
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px white solid;
+}
+.textprice{
+    margin-top: 4px;
+}
+.rating{
+    margin-top: 4px;
+}
+
+.imgin{
+    height: 140px;
+    width: 250px;
+    background-color: aqua;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.img{
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    transition: transform .2s; 
+}
+.img:hover{
+    transform: scale(1.2);
+}
+
+/* meadia screen */
+@media screen and (max-width: 780px){
+    .container{
+        display: block;
+        
+    }
+    .side{
+        width: 100%;           
+    }
+    .hedding{
+        font-size: 30px;
+    }
+    .toggle{
+       width: 45%;
+    }
+
+}
