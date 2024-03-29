@@ -1,3 +1,4 @@
+/*this css for top hedding and paragraph part */
 .toppart{
     width: 80%;
     margin-top: 10px;
@@ -20,6 +21,7 @@
     width: 50%;
     text-align: center;
 }
+/*this css filter bar for hide and show side bar and dispalying number of products */
 .filterbar{
     width: 80%;
     border-top: 1px solid black;
@@ -38,7 +40,18 @@
     font-weight: 600;
     cursor: pointer;
 }
-
+/* Loading div on page */
+.loadingmain{
+    width: 100%;
+    text-align: center;
+}
+/* Loading text on page */
+.loading{
+    font-size: 45px;
+    font-weight: 600;
+    
+}
+/* Toggle box when we hover on RECOMENDED */
 .toggle{
     width: 15%;
     background-color: white;
@@ -70,36 +83,43 @@
     padding: 4px;
     cursor: pointer;
 }
-
+/*this class for hide the div */
 .hidden{
     display: none;
 }
+/*this css for sidebar in Idal option  */
 .idealbox{
     border-bottom: 1px black solid;
     padding-top: 10px;
     padding-bottom: 10px;
     
 }
+/*this css for sidebar in Ocassion option  */
 .ocassionbox{
     border-bottom: 1px black solid;
     padding-top: 10px;
     padding-bottom: 10px;
     
 }
+/*this css for sidebar in Idal hedding */
 .hedingideal{
     font-weight: 700; 
     cursor: pointer;  
 }
+
 .box{
     display: flex;
 }
+/*this css for sidebar */
 .side{
     padding: 4px;
     width: 15%;
 }
+/*this css for sidebar in costomize option */
 .costomize{
     border-bottom: 1px solid black;
 }
+/*this css for flex sidebar and porducts */
 .container{
     display: flex;
     width: 80%;
@@ -107,19 +127,20 @@
     margin-top: 14px;
     margin-bottom: 14px;
 }
+/*this css for RECOMENDED option */
 .deffilter{
     margin-left: auto;
     cursor: pointer;
 }
+/*this css for productsor map menthod data are wrapped */
 .main{
     width: 100%;
-   
     display: flex;
     flex-wrap: wrap;
-    
     justify-content: space-between;
     margin: auto;
 }
+/*this css all cards */
 .card{
     height: 255px;
     background-color: black;
@@ -130,9 +151,7 @@
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     overflow: hidden;
 }
-.textbox{
-    
-}
+/*this css discount card text */
 .textdisco{
     margin-top: 6px;
 }
@@ -141,18 +160,21 @@
     border-radius: 5px;
     padding: 3px;
 }
+/*this css for title on card */
 .texttitle{
     font-weight: 600;
     text-align: center;
     border-bottom: 1px white solid;
 }
+/*this css for price text on card */
 .textprice{
     margin-top: 4px;
 }
+/*this css for rating text on card */
 .rating{
     margin-top: 4px;
 }
-
+/*this css for image on card */
 .imgin{
     height: 140px;
     width: 250px;

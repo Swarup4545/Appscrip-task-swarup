@@ -5,6 +5,7 @@ import { selectProduct } from '../redux/actions/productAction';//this file is re
 import styles from './main.module.css';//css file
 const Products = ({showFilter,setShowFilter,item1}) => {
     const [ideal, setIdeal] = useState(false);
+    const [loading, setLoading] = useState(true);
     const [occasion, setOcassion] = useState(false);
     const [work, setWork] = useState(false);
     const [fabrik, setFabrik] = useState(false);
@@ -66,6 +67,7 @@ const Products = ({showFilter,setShowFilter,item1}) => {
     },[item1])
 
     useEffect(() => {
+        setLoading(!products);
         setItem(products); // Set item state with the products
     }, [products]); 
     
@@ -133,9 +135,11 @@ const Products = ({showFilter,setShowFilter,item1}) => {
             </div>
         )
     })
+    console.log("t/f",loading)
   return (
     <>
-    <div className={styles.container}>
+    {/*here we create Employed conditional rendering in React to dynamically display components based on the availability of API data*/}
+    {!loading? (<div className={styles.container}>
                 {/*here we used conditional rendring and string interpolation*/}
                 <div className={showFilter ?`${styles.side}`:`${styles.hidden}`} >
                     <div className={styles.idealbox}>
@@ -251,7 +255,8 @@ const Products = ({showFilter,setShowFilter,item1}) => {
                     {/*here we add cards from map api data.*/}
                     {renderlist}
                 </div>
-            </div>
+            </div>):(<div className={styles.loadingmain}><p className={styles.loading}>Loading</p></div>)
+    }        
     </>
   )
 }
