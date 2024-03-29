@@ -64,7 +64,7 @@ const Home = () => {
                 </div>
                 {/*here we used conditional rendring and string interpolation*/}
                 <div className={`${showToggle ? styles.toggle : styles.hidden}`} onMouseLeave={handleMouseLeave}>
-                    <p className={styles.toggle1} >RECOMENED</p>
+                    <p className={styles.toggle1} >RECOMENDED</p>
                     <p className={styles.toggle2} onClick={()=>recomended1(10)}>DISCOUNT FROM 10%</p>
                     <p className={styles.toggle3} onClick={()=>recomended2(4.10)}>4 STAR +</p>
                     <p className={styles.toggle4} onClick={()=>recomended3(1000)}>PRICE:HIGH</p>
