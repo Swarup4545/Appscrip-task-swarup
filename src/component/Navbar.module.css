@@ -120,7 +120,27 @@
     .navMenu.active{
       left: 0;
     }
-  
+    .toplogobox{
+      margin-right: 0px;
+      height: 15px;
+    }
+    .eng{
+      display: flex;
+    }
+    .engp{
+      margin-top: 1px;
+    }
+    .brand{
+      margin-left: 0px;
+      z-index: 100;
+    }
+    .logo{
+      font-size: 25px;
+    }
+    .brand img{
+      
+      height: 20px;
+    }
     .navMenu li {
       margin: 16px 0;
     }
