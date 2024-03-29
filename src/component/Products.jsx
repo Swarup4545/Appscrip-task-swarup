@@ -5,7 +5,7 @@ import { selectProduct } from '../redux/actions/productAction';//this file is re
 import styles from './main.module.css';//css file
 const Products = ({showFilter,setShowFilter,item1}) => {
     const [ideal, setIdeal] = useState(false);
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(false);
     const [occasion, setOcassion] = useState(false);
     const [work, setWork] = useState(false);
     const [fabrik, setFabrik] = useState(false);
@@ -66,8 +66,14 @@ const Products = ({showFilter,setShowFilter,item1}) => {
         setItem(item1)
     },[item1])
 
+    useEffect(()=>{
+        if(products.length>0)
+        {
+            setLoading(!loading)
+        }
+    },[products])
+    console.log('loading',loading)
     useEffect(() => {
-        setLoading(!products);
         setItem(products); // Set item state with the products
     }, [products]); 
     
@@ -135,11 +141,11 @@ const Products = ({showFilter,setShowFilter,item1}) => {
             </div>
         )
     })
-    console.log("t/f",loading)
+    
   return (
     <>
     {/*here we create Employed conditional rendering in React to dynamically display components based on the availability of API data*/}
-    {!loading? (<div className={styles.container}>
+    {loading? (<div className={styles.container}>
                 {/*here we used conditional rendring and string interpolation*/}
                 <div className={showFilter ?`${styles.side}`:`${styles.hidden}`} >
                     <div className={styles.idealbox}>
